@@ -29,7 +29,6 @@ Package.onUse(function (api) {
   // client
 
   api.addFiles([
-    'lib/client/templates/custom_post_author.html',
     'lib/client/templates/custom_post_avatars.html',
     'lib/client/templates/custom_post_comments_link.html',
     'lib/client/templates/custom_post_info.html',
