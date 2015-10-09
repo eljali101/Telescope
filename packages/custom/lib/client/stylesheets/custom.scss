@@ -1,4 +1,32 @@
-.custom-hero-banner{
+.post:hover {
+  background: #fcf5e2;
+}
+
+.upvote-link:hover, .icon-upvote:hover {
+  color: #009933;
+}
+
+.post-vote .upvoted .upvote-link {
+  color: #009933 !important;
+}
+
+.post-vote .vote-actions {
+  border: none;
+}
+
+.post-vote {
+  border: 1px solid #4E555D;
+  padding: 5px;
+}
+
+.points {
   text-align: center;
-  color: purple;
+}
+
+.post-content {
+  margin-left: 15px;
+}
+
+.post-heading {
+  margin-bottom: 10px;
 }

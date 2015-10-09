@@ -92,6 +92,7 @@ momentjs:moment@2.10.6
 mongo@1.1.1
 mongo-id@1.0.1
 mongo-livedata@1.0.9
+my-custom-package@0.1.0
 npm-bcrypt@0.7.8_2
 npm-mongo@1.4.39_1
 oauth@1.1.6
