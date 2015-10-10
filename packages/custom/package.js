@@ -29,14 +29,16 @@ Package.onUse(function (api) {
   // client
 
   api.addFiles([
-    'lib/client/templates/custom_header.html',
+      'lib/client/templates/custom_header.html',
+      'lib/client/templates/custom_post_author.html',
     'lib/client/templates/custom_post_avatars.html',
     'lib/client/templates/custom_post_comments_link.html',
     'lib/client/templates/custom_post_info.html',
     'lib/client/templates/custom_post_thumbnail.html',
     'lib/client/templates/custom_post_vote.html',
     'lib/client/stylesheets/custom.scss',
-    'lib/client/custom_templates.js',
+      'lib/client/custom_templates.js'
+
   ], ['client']);
 
   // server
