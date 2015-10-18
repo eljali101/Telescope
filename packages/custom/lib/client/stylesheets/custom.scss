@@ -1,9 +1,9 @@
 .upvote-link:hover, .icon-upvote:hover {
-  color: #009933;
+  color: #6a916c;
 }
 
 .post-vote .upvoted .upvote-link {
-  color: #009933 !important;
+  color: #6a916c !important;
 }
 
 .post-vote .vote-actions {
@@ -59,7 +59,7 @@
 }
 
 .submit {
-  background-color: #009933 !important;
+  background-color: #6a916c !important;
 }
 
 .post-avatars, .avatar-link, .post-avatars .avatar {
@@ -80,8 +80,31 @@ a, p {
 }
 
 .post {
-  width: 90%;
+  width: 97%;
   margin-left: 3%;
-  background-color: #EEEEEE !important;
+  background-color: #f4f4f4 !important;
   margin-bottom: 5px;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.views-menu-wrapper {
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.views-menu-wrapper span{
+  font-size: 15px;
+  font-weight:100;
+}
+
+.views-menu-wrapper a:hover{
+  color: #000000;
+  text-decoration: underline;
+}
+
+header {
+  background: #3e4862 !important;
 }
