@@ -8,3 +8,7 @@ Telescope.modules.add('primaryNav', {
     template: 'user_menu',
     order: 1
 });
+
+Telescope.modules.remove('postComponents', 'post_discuss');
+
+Telescope.modules.remove('postComponents', 'post_rank');
