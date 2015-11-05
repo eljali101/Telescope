@@ -31,6 +31,7 @@ Package.onUse(function (api) {
   api.addFiles([
       'lib/client/templates/custom_header.html',
       'lib/client/templates/custom_post_author.html',
+      'lib/client/templates/custom_logo.html',
     'lib/client/templates/custom_post_avatars.html',
     'lib/client/templates/custom_post_comments_link.html',
     'lib/client/templates/custom_post_info.html',
