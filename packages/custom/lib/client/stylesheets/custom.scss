@@ -1,36 +1,88 @@
-.upvote-link:hover, .icon-upvote:hover {
-  color: #6a916c;
+//General
+a, p {
+  letter-spacing: 1px;
 }
 
-.post-vote .upvoted .upvote-link {
-  color: #6a916c !important;
+body {
+  background-color: #f4f4f4;
 }
 
-.post-vote .vote-actions {
-  border: none;
+//Posts
+.post.sticky {
+  margin-bottom: 30px;
 }
 
-.post-vote {
-  border: 1px solid #c5c8cf;
-  padding: 5px;
-}
-
-.points {
-  text-align: center;
-}
-
-.post-content {
-  margin-left: 15px;
+.post {
+  width: 97%;
+  margin-left: 3%;
+  background-color: #f4f4f4 !important;
+  margin-bottom: 5px;
 }
 
 .post-heading {
   margin-bottom: 10px;
 }
 
+.post-content {
+  margin-left: 15px;
+}
+
+.post-vote {
+  border: 1px solid #c5c8cf;
+  padding: 5px;
+}
+.post-vote .vote-actions {
+  border: none;
+}
+.post-vote .upvoted .upvote-link {
+  color: #6a916c !important;
+}
+
+.post-avatars {
+  margin-right: 50px !important;
+}
+.post-avatars, .avatar-link, .post-avatars .avatar {
+  width: 50px;
+  height:50px;
+}
+
+.post-author:hover, .comments-link:hover, .post-title:hover {
+  color: #9db4f5 !important;
+}
+
+.upvote-link:hover, .icon-upvote:hover {
+  color: #6a916c;
+}
+
+//Header, Tagline, Logo
+header {
+  background: #3e4862 !important;
+}
+
 .tagline {
   font-size: 11pt;
   margin-bottom: 35px;
   margin-top: 0px !important;
+}
+
+.logo-image {
+  z-index: -1;
+  position: absolute;
+  opacity: .4;
+  margin-left: 30px;
+}
+.logo-image a {
+  display: inline-block;
+}
+
+.logo-text a {
+  margin-top: 10px;
+  letter-spacing: 0px !important;
+}
+
+//Primary and Secondary nav
+.menu-label {
+  font-size: 8pt;
 }
 
 .search {
@@ -41,56 +93,12 @@
   text-align: center;
 }
 
-.post-author:hover, .comments-link:hover, .post-title:hover {
-  color: #9db4f5 !important;
-}
-
-.logo-image {
-  z-index: -1;
-  position: absolute;
-  opacity: .4;
-  margin-left: 30px;
-}
-
-.logo-image a {
-  display: inline-block;
-}
-
-.logo-text a {
-  margin-top: 10px;
-  letter-spacing: 0px !important;
-}
-
 .submit {
   background-color: #6a916c !important;
 }
 
-.post-avatars, .avatar-link, .post-avatars .avatar {
-  width: 50px;
-  height:50px;
-}
-
-.post-avatars {
-  margin-right: 50px !important;
-}
-
-.post.sticky {
-  margin-bottom: 30px;
-}
-
-a, p {
-  letter-spacing: 1px;
-}
-
-.post {
-  width: 97%;
-  margin-left: 3%;
-  background-color: #f4f4f4 !important;
-  margin-bottom: 5px;
-}
-
-body {
-  background-color: #f4f4f4;
+.points {
+  text-align: center;
 }
 
 .views-menu-wrapper {
@@ -108,16 +116,13 @@ body {
   text-decoration: underline;
 }
 
-header {
-  background: #3e4862 !important;
-}
-
-.menu-label {
-  font-size: 8pt;
-}
-
+//Mobile
 @media(max-width: 400px) {
   .logo-image {
+    display: none;
+  }
+
+  .tagline {
     display: none;
   }
 }
