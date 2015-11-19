@@ -115,3 +115,9 @@ header {
 .menu-label {
   font-size: 8pt;
 }
+
+@media(max-width: 400px) {
+  .logo-image {
+    display: none;
+  }
+}
