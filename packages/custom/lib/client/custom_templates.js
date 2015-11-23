@@ -1,4 +1,4 @@
-var acceptedName = 'Assigned Projects'
+var acceptedName = 'Assigned'
 
 Telescope.utils.icons.upvote = "thumbs-up fa-2x";
 
@@ -18,7 +18,7 @@ Telescope.modules.remove('postComponents', 'post_rank');
 //Lord forgive me.
 window.setInterval(function() {
   displayAccepted()
-}, 3000);
+}, 2000);
 
 $(document).ready(function() {
   displayAccepted();
@@ -30,9 +30,16 @@ var displayAccepted = function() {
       clearInterval(i);
       var category = document.getElementsByClassName('main-category-title');
       var acceptedPosts = document.getElementsByClassName('post category-' + acceptedName);
-      if ((category.length == 0 || category[0].innerHTML != acceptedName) && document.getElementsByClassName('single-post grid').length == 0) {
-        for (i = 0; i < acceptedPosts.length; i++) {
-          acceptedPosts[i].style.display = 'none';
+      var posts = document.getElementsByClassName('post');
+      if (category.length == 0 || category[0].innerHTML != acceptedName) {
+        if (document.getElementsByClassName('single-post grid').length != 0) {
+          for (i = 0; i < acceptedPosts.length; i++) {
+            acceptedPosts[i].style.display = 'flex';
+          }
+        } else {
+          for (i = 0; i < acceptedPosts.length; i++) {
+            acceptedPosts[i].style.display = 'none';
+          }
         }
       } else {
         for (i = 0; i < acceptedPosts.length; i++) {
@@ -40,6 +47,11 @@ var displayAccepted = function() {
         }
       }
       linkClickFunctions();
+      if (posts.length - acceptedPosts.length < 10) {
+        if ($('.more-button').length > 0) {
+          $('.more-button').click();
+        }
+      }
     }
   }, 10);
 
