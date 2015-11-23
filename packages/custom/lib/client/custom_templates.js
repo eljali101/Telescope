@@ -1,4 +1,4 @@
-var acceptedName = 'Assigned'
+var acceptedName = 'Assigned';
 
 Telescope.utils.icons.upvote = "thumbs-up fa-2x";
 
@@ -28,10 +28,18 @@ var displayAccepted = function() {
   var i = setInterval(function() {
     if (document.getElementsByClassName('zone-wrapper top').length > 0) {
       clearInterval(i);
-      var category = document.getElementsByClassName('main-category-title');
+      var categories = document.getElementsByClassName('main-category-title');
+      if (categories.length > 0) {
+        var categoryIncludesAccepted = false;
+        for (i = 0; i < categories.length; i++) {
+          if (categories[i].innerHTML.indexOf(acceptedName) > -1) {
+            categoryIncludesAccepted = true;
+          }
+        }
+      }
       var acceptedPosts = document.getElementsByClassName('post category-' + acceptedName);
       var posts = document.getElementsByClassName('post');
-      if (category.length == 0 || category[0].innerHTML != acceptedName) {
+      if (categories.length == 0 || !categoryIncludesAccepted) {
         if (document.getElementsByClassName('single-post grid').length != 0) {
           for (i = 0; i < acceptedPosts.length; i++) {
             acceptedPosts[i].style.display = 'flex';
@@ -41,16 +49,17 @@ var displayAccepted = function() {
             acceptedPosts[i].style.display = 'none';
           }
         }
+        linkClickFunctions();
+        if (posts.length - acceptedPosts.length < 10) {
+          if ($('.more-button').length > 0) {
+            $('.more-button').click();
+          }
+        }
       } else {
         for (i = 0; i < acceptedPosts.length; i++) {
           acceptedPosts[i].style.display = 'flex';
         }
-      }
-      linkClickFunctions();
-      if (posts.length - acceptedPosts.length < 10) {
-        if ($('.more-button').length > 0) {
-          $('.more-button').click();
-        }
+        linkClickFunctions();
       }
     }
   }, 10);
