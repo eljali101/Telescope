@@ -35,7 +35,8 @@ Template.afCategory_bootstrap3.helpers({
   }
 });
 
-var acceptedName = 'accepted'
+//CHANGE NAME OF ACCEPTED CATEGORY
+var acceptedName = 'Assigned Projects'
 
 Template.afCategory_bootstrap3.events({
   "click .category-input-item label": function (e) {
