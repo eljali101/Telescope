@@ -35,12 +35,23 @@ Template.afCategory_bootstrap3.helpers({
   }
 });
 
+var acceptedName = 'accepted'
+
 Template.afCategory_bootstrap3.events({
   "click .category-input-item label": function (e) {
     // only trigger on actual checkbox' click event, and if the checkbox has just been checked
     if ($(e.toElement).is("input") && $(e.toElement).prop("checked")) {
-      // when marking a category as checked, check all checkboxes of all parent nodes as well
-      $(e.currentTarget).parentsUntil('.category-input', ".menu-item").find(">.menu-item-wrapper input:checkbox").prop("checked", true);
+      if ($(e.toElement).parent().text() != " " + acceptedName) {
+        // when marking a category as checked, check all checkboxes of all parent nodes as well
+        $(e.currentTarget).parentsUntil('.category-input', ".menu-item").find(">.menu-item-wrapper input:checkbox").prop("checked", true);
+      } else {
+        if (Users.is.admin(Accounts.userId())) {
+          $(e.currentTarget).parentsUntil('.category-input', ".menu-item").find(">.menu-item-wrapper input:checkbox").prop("checked", true);
+        } else {
+          alert("You can't use this unless you're an admin!")
+          $(e.toElement).prop('checked', false);
+        }
+      }
     }
   }
 });
