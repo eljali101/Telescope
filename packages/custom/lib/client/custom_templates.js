@@ -1,4 +1,5 @@
-var acceptedName = 'Assigned';
+var acceptedCategorySlug = 'Assigned';
+var acceptedCategory = 'Assigned Projects';
 
 Telescope.utils.icons.upvote = "thumbs-up fa-2x";
 
@@ -37,7 +38,7 @@ var displayAccepted = function() {
           }
         }
       }
-      var acceptedPosts = document.getElementsByClassName('post category-' + acceptedName);
+      var acceptedPosts = document.getElementsByClassName('post category-' + acceptedCategorySlug);
       var posts = document.getElementsByClassName('post');
       if (categories.length == 0 || !categoryIncludesAccepted) {
         if (document.getElementsByClassName('single-post grid').length != 0) {
@@ -67,7 +68,6 @@ var displayAccepted = function() {
 };
 
 var linkClickFunctions = function() {
-  console.log('called');
   links = document.getElementsByTagName('a');
   for (i = 0; i < links.length; i++) {
     links[i].onclick = function () {

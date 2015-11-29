@@ -1,3 +1,5 @@
+var acceptedCategory = 'Assigned'
+
 AutoForm.addInputType("bootstrap-category", {
   template: "afCategory",
   valueOut: function () {
@@ -35,14 +37,13 @@ Template.afCategory_bootstrap3.helpers({
   }
 });
 
-//CHANGE NAME OF ACCEPTED CATEGORY
-var acceptedName = 'Assigned'
+
 
 Template.afCategory_bootstrap3.events({
   "click .category-input-item label": function (e) {
     // only trigger on actual checkbox' click event, and if the checkbox has just been checked
     if ($(e.toElement).is("input") && $(e.toElement).prop("checked")) {
-      if ($(e.toElement).parent().text() != " " + acceptedName) {
+      if ($(e.toElement).parent().text() != " " + acceptedCategory) {
         // when marking a category as checked, check all checkboxes of all parent nodes as well
         $(e.currentTarget).parentsUntil('.category-input', ".menu-item").find(">.menu-item-wrapper input:checkbox").prop("checked", true);
       } else {
