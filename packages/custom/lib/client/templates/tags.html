@@ -1,0 +1,23 @@
+<template name="tags">
+  <script>
+    pathArray = location.href.split( '/' );
+    protocol = pathArray[0];
+    host = pathArray[2];
+    baseUrl = protocol + '//' + host;
+
+    var tagString = '{{Tags}}';
+    if (tagString.length > 0) {
+      var allTags = tagString.split(',');
+      var parentId = '{{_id}}'
+      var section = $('#' + parentId + ' .post-tags');
+      for (i = 0; i < allTags.length; i++) {
+        section.append('<a href="' + baseUrl + '/?query=' + allTags[i].trim().toLowerCase() + '">#' + allTags[i].trim().toLowerCase() + '</a>');
+      }
+    }
+  </script>
+  <h3 class="post-tags {{moduleClass}}">
+
+  </h3>
+</template>
+
+

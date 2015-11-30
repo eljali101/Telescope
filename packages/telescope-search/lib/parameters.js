@@ -11,7 +11,6 @@ function addSearchQueryParameter (parameters, terms) {
       }
     });
   }
-  console.log(parameters);
   return parameters;
 }
 Telescope.callbacks.add("postsParameters", addSearchQueryParameter);

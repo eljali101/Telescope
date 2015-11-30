@@ -54,6 +54,23 @@ body {
   color: #6a916c;
 }
 
+.post-tags {
+  font-weight: 300;
+  font-size: 14px;
+  color: #526290;
+  line-height: 1.5;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.post-tags > a {
+  margin-left: 10px;
+  font-weight:300;
+}
+
 //Header, Tagline, Logo
 header {
   background: #3e4862 !important;

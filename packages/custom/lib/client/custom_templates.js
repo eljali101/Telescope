@@ -33,7 +33,7 @@ var displayAccepted = function() {
       if (categories.length > 0) {
         var categoryIncludesAccepted = false;
         for (i = 0; i < categories.length; i++) {
-          if (categories[i].innerHTML.indexOf(acceptedName) > -1) {
+          if (categories[i].innerHTML.indexOf(acceptedCategory) > -1) {
             categoryIncludesAccepted = true;
           }
         }
