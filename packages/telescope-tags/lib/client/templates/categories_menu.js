@@ -61,7 +61,7 @@ Meteor.startup(function () {
       } else if (Settings.get('navLayout', 'top-nav') === 'top-nav') {
         return 'menu-dropdown';
       } else {
-        return 'menu-collapsible menu-always-expanded';
+        return 'menu-collapsible';
       }
     }
   });

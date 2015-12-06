@@ -40,6 +40,7 @@ Package.onUse(function (api) {
     'lib/client/templates/tags.html',
     'lib/client/templates/custom_post_content.html',
     'lib/client/templates/custom_post_submit.html',
+    'lib/client/templates/custom_categories_menu.html',
     'lib/client/stylesheets/custom.scss',
       'lib/client/custom_templates.js'
 

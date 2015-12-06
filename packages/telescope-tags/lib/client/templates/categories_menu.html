@@ -1,7 +1,23 @@
 <template name="categories_menu">
   <div class="categories-menu-wrapper {{moduleClass}}">
     {{#if hasCategories}}
+      <span class="category-title">Categories</span>
+      <span class="category-toggle" onclick = "toggleCat()">{{{icon "expand"}}}</span>
+      <span class="category-toggle" onclick = "toggleCat()" style="display:none">{{{icon "collapse"}}}</span>
+
       {{> menuComponent menuName="categories" menuItems=menuItems menuClass=menuClass}}
     {{/if}}
+    <script>
+      console.log('called');
+      $('.menu-label').filter(':contains("All")').toggle();
+      $('.category-label').toggle();
+    </script>
+    <script>
+      var toggleCat = function() {
+        $('.menu-label').filter(':contains("All")').toggle();
+        $('.category-label').toggle();
+        $('.category-toggle').toggle();
+      }
+    </script>
   </div>
 </template>

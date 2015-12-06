@@ -133,6 +133,11 @@ header {
   text-decoration: underline;
 }
 
+.side-nav .categories-menu .menu-top-level {
+  margin-top: 10px;
+  display: block;
+}
+
 //Mobile
 @media(max-width: 600px) {
   .logo-image {
