@@ -1,7 +1,7 @@
 // push "search" template to primaryNav
 Telescope.modules.add("primaryNav", {
   template: 'search',
-  order: 100
+  order: 2
 });
 
 Telescope.modules.add("mobileNav", {

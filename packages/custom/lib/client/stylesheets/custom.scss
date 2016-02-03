@@ -138,6 +138,10 @@ header {
   display: block;
 }
 
+.primary-nav  {
+  display: block !important;
+}
+
 //Mobile
 @media(max-width: 600px) {
   .logo-image {
