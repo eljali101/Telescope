@@ -1,5 +1,7 @@
 var acceptedCategorySlug = 'Assigned';
 var acceptedCategory = 'Assigned Projects';
+var pendingCategorySlug = 'Pending';
+var pendingCategory = 'Under Consideration';
 
 Telescope.utils.icons.upvote = "thumbs-up fa-2x";
 
@@ -18,11 +20,13 @@ Telescope.modules.remove('postComponents', 'post_rank');
 
 //Lord forgive me.
 window.setInterval(function() {
-  displayAccepted()
+  displayAccepted();
+  displayPending();
 }, 2000);
 
 $(document).ready(function() {
   displayAccepted();
+  displayPending();
 });
 
 var displayAccepted = function() {
@@ -64,6 +68,47 @@ var displayAccepted = function() {
       }
     }
   }, 10);
+};
+
+var displayPending = function() {
+  var i = setInterval(function() {
+    if (document.getElementsByClassName('zone-wrapper top').length > 0) {
+      clearInterval(i);
+      var categories = document.getElementsByClassName('main-category-title');
+      if (categories.length > 0) {
+        var categoryIncludesPending = false;
+        for (i = 0; i < categories.length; i++) {
+          if (categories[i].innerHTML.indexOf(pendingCategory) > -1) {
+            categoryIncludesPending = true;
+          }
+        }
+      }
+      var pendingPosts = document.getElementsByClassName('post category-' + pendingCategorySlug);
+      var posts = document.getElementsByClassName('post');
+      if (categories.length == 0 || !categoryIncludesPending) {
+        if (document.getElementsByClassName('single-post grid').length != 0) {
+          for (i = 0; i < pendingPosts.length; i++) {
+            pendingPosts[i].style.display = 'flex';
+          }
+        } else {
+          for (i = 0; i < pendingPosts.length; i++) {
+            pendingPosts[i].style.display = 'none';
+          }
+        }
+        linkClickFunctions();
+        if (posts.length - pendingPosts.length < 10) {
+          if ($('.more-button').length > 0) {
+            $('.more-button').click();
+          }
+        }
+      } else {
+        for (i = 0; i < pendingPosts.length; i++) {
+          pendingPosts[i].style.display = 'flex';
+        }
+        linkClickFunctions();
+      }
+    }
+  }, 10);
 
 };
 
@@ -73,6 +118,7 @@ var linkClickFunctions = function() {
     links[i].onclick = function () {
       $(document).ready(function () {
         displayAccepted()
+        displayPending();
       });
     }
   }

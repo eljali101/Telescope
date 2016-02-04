@@ -1,4 +1,5 @@
-var acceptedCategory = 'Assigned'
+var acceptedCategory = 'Assigned Projects'
+var pendingCategory = 'Under Consideration'
 
 AutoForm.addInputType("bootstrap-category", {
   template: "afCategory",
@@ -43,8 +44,9 @@ Template.afCategory_bootstrap3.events({
   "click .category-input-item label": function (e) {
     // only trigger on actual checkbox' click event, and if the checkbox has just been checked
     if ($(e.toElement).is("input") && $(e.toElement).prop("checked")) {
-      if ($(e.toElement).parent().text() != " " + acceptedCategory) {
+      if ($(e.toElement).parent().text() != " " + acceptedCategory && $(e.toElement).parent().text() != " " + pendingCategory) {
         // when marking a category as checked, check all checkboxes of all parent nodes as well
+        console.log($(e.toElement).parent().text())
         $(e.currentTarget).parentsUntil('.category-input', ".menu-item").find(">.menu-item-wrapper input:checkbox").prop("checked", true);
       } else {
         if (Users.is.admin(Accounts.userId())) {
