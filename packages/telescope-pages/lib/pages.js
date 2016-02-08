@@ -36,12 +36,12 @@ Pages.before.insert(function (userId, doc) {
 
 Telescope.modules.add("primaryNav", {
   template: "pages_menu",
-  order: 5
+  order: 1
 });
 
 Telescope.modules.add("mobileNav", {
   template: 'pages_menu',
-  order: 5
+  order: 1
 });
 
 Meteor.startup(function () {

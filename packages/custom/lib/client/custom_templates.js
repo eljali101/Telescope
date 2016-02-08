@@ -19,6 +19,7 @@ Telescope.modules.remove('postComponents', 'post_discuss');
 Telescope.modules.remove('postComponents', 'post_rank');
 
 //Lord forgive me.
+//removes accepted posts and pending posts from all but the corresponding category pages
 window.setInterval(function() {
   displayAccepted();
   displayPending();

@@ -79,7 +79,6 @@ header {
 .tagline {
   font-size: 11pt;
   width: 203px;
-  margin-bottom: 35px;
   margin-top: 0px !important;
 }
 
@@ -145,6 +144,18 @@ header {
 
 .primary-nav  {
   display: block !important;
+}
+
+.pages-menu {
+  border-bottom: 1px solid;
+  font-size: 12pt;
+  text-align: center;
+}
+
+.pages-menu-item {
+  display: inline;
+  width: 50%;
+  margin-right: 12px;
 }
 
 //Mobile

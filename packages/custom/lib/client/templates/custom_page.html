@@ -1,0 +1,9 @@
+<template name="custom_page">
+  {{#with page}}
+  <div class="page-container">
+    <div class="page-body markdown" aria-live="polite">
+      {{#markdown}}{{content}}{{/markdown}}
+    </div>
+  </div>
+  {{/with}}
+</template>
