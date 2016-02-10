@@ -145,19 +145,6 @@ header {
 .primary-nav  {
   display: block !important;
 }
-
-.pages-menu {
-  border-bottom: 1px solid;
-  font-size: 12pt;
-  text-align: center;
-}
-
-.pages-menu-item {
-  display: inline;
-  width: 50%;
-  margin-right: 12px;
-}
-
 //Mobile
 @media(max-width: 600px) {
   .logo-image {
