@@ -9,9 +9,21 @@ Telescope.modules.remove('top', 'tagline_banner');
 
 Telescope.modules.remove('secondaryNav', 'user_menu');
 
+Telescope.modules.remove('primaryNav', 'search');
+
+Telescope.modules.add('primaryNav', {
+  template: 'custom_nav',
+  order: 1
+});
+
 Telescope.modules.add('primaryNav', {
     template: 'user_menu',
-    order: 1
+    order: 2
+});
+
+Telescope.modules.add('primaryNav', {
+  template: 'search',
+  order: 3
 });
 
 Telescope.modules.remove('postComponents', 'post_discuss');

@@ -43,6 +43,7 @@ Package.onUse(function (api) {
     'lib/client/templates/custom_categories_menu.html',
     'lib/client/templates/custom_footer_code.html',
     'lib/client/templates/custom_page.html',
+    'lib/client/templates/custom_nav.html',
     'lib/client/stylesheets/custom.scss',
       'lib/client/custom_templates.js'
 
